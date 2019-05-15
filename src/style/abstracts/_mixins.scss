@@ -1,0 +1,31 @@
+@mixin flex-box($justify-content:center,$align-items:center,$direction:column) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $direction;
+}
+@mixin border($size,$color) {
+    border:$size solid $color;
+}
+
+@mixin respond-above($breakpoint) {
+
+    // If the breakpoint exists in the map.
+    @if map-has-key($breakpoints, $breakpoint) {
+  
+      // Get the breakpoint value.
+      $breakpoint-value: map-get($breakpoints, $breakpoint);
+        
+      @debug 'break point #{breakpoint} break point value #{breakpoint-value}';
+      // Write the media query.
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+  
+    // If the breakpoint doesn't exist in the map.
+    } @else {
+  
+      // Log a warning.
+      @error 'Invalid breakpoint: #{$breakpoint}.';
+    }
+  }

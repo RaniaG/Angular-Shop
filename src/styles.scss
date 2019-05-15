@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700');
+@import 'style/abstracts/variables';
+@import 'style/abstracts/functions';
+@import 'style/abstracts/mixins';
+@import 'style/abstracts/placeholders';
+
+@import 'style/base/typography';
+
+@import 'style/components/price';
+
+
+

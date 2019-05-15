@@ -1,0 +1,14 @@
+.price{
+    font-family: $font;
+    font-size: 1.6rem;
+    font-weight: 700;
+    &--old{
+        color: $color-primary;
+        text-decoration: line-through;
+    }
+    &--dollar{
+        &:before{
+            content:"$"
+        }
+    }
+}

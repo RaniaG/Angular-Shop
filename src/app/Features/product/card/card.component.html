@@ -1,0 +1,18 @@
+<div class='card'>
+
+  <div class='card__img'>
+    <img src="{{product.photo||'https://www.tourneyengine.com/upload/images/noimage.jpg'}}" alt="">
+  </div>
+  <div class='card__info'>
+    <div class='card__name'>{{product.name}}</div>
+    <div class='card__price'>
+      <span class='price price--old price--dollar' *ngIf="product.discount">{{product.price+product.discount}}</span>
+      <span class='price price--new price--dollar'>{{product.price}}</span>
+    </div>
+  </div>
+  <div class='card__controls' #controls>
+    <div class='card__control'><i class="fas fa-shopping-cart"></i></div>
+    <div class='card__control'><i class="far fa-eye"></i></div>
+    <div class='card__control'><i class="fas fa-retweet"></i></div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<div class='list-container'>
+  <div class='categories'>
+    <div class='categories__title'>Categories</div>
+    <div class='categories__item'>Cameras</div>
+  </div>
+  <div class="list">
+    <app-card *ngFor="let item of products" [product]="item">
+    </app-card>
+  </div>
+</div>

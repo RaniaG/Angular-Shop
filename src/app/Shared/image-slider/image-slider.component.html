@@ -1,0 +1,14 @@
+<div class='slider'>
+  <div class='slider__images'>
+    <div class='slider__img' *ngFor="let image of images;let i = index" (click)="select(i)">
+      <img [src]="image" alt="">
+    </div>
+  </div>
+  <div class='slider__main-img'>
+    <img [src]="images?images[currentIndex]:''" alt="">
+    <div class='slider__controls'>
+      <div class='slider__btn' (click)="prev()"><i class="fas fa-chevron-left"></i></div>
+      <div class='slider__btn' (click)="next()"><i class="fas fa-chevron-right"></i></div>
+    </div>
+  </div>
+</div>
